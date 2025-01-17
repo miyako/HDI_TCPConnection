@@ -1,0 +1,5 @@
+CALL WORKER:C1389("4D_Lightbulb_Server"; Formula:C1597(4D_Lightbulb_Server))
+CALL WORKER:C1389("4D_Thermometer_Server"; Formula:C1597(4D_Thermometer_Server))
+CALL WORKER:C1389("4D_Alarm_Server"; Formula:C1597(4D_Alarm_Server))
+CALL WORKER:C1389("4D_Music_Server"; Formula:C1597(4D_Music_Server))
+CALL WORKER:C1389("4D_Plant_Server"; Formula:C1597(4D_Plant_Server))
