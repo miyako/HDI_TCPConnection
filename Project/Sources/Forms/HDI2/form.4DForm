@@ -277,5 +277,6 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 197
+	"geometryStamp": 197,
+	"windowTitle": "HDI TCPConnection"
 }
