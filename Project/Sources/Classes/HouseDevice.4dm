@@ -9,7 +9,7 @@ Function connect()
 	
 	This:C1470.connection:=4D:C1709.TCPConnection.new("localhost"; This:C1470.port; This:C1470)
 	
-	//Disconnect to the server
+	//Disconnect from the server
 Function disconnect()
 	
 	This:C1470.connection.shutdown()
