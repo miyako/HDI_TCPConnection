@@ -102,14 +102,14 @@
 			"objects": {
 				"Rectangle1": {
 					"type": "rectangle",
-					"top": 42,
-					"left": 21,
-					"width": 916,
-					"height": 536,
-					"right": 937,
+					"top": 49,
+					"left": 31,
+					"width": 892,
+					"height": 523,
+					"right": 923,
 					"fill": "#FFFFFF",
 					"stroke": "transparent",
-					"bottom": 578
+					"bottom": 572
 				},
 				"Static Picture1": {
 					"type": "picture",
@@ -288,6 +288,6 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 213,
+	"geometryStamp": 217,
 	"windowTitle": "HDI TCPConnection"
 }
