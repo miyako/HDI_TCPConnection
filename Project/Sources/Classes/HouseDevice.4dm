@@ -1,3 +1,7 @@
+property connection : 4D:C1709.TCPConnection
+property form : Object
+property port : Integer
+
 Class constructor($form : Object; $port : Integer)
 	
 	This:C1470.form:=$form
@@ -7,13 +11,15 @@ Class constructor($form : Object; $port : Integer)
 	//Connects to one of the servers launched inside workers
 Function connect()
 	
-	This:C1470.connection:=4D:C1709.TCPConnection.new("localhost"; This:C1470.port; This:C1470)
+	This:C1470.connection:=This:C1470.connection=Null:C1517 ? 4D:C1709.TCPConnection.new("localhost"; This:C1470.port; This:C1470) : This:C1470.connection
 	
 	//Disconnect from the server
 Function disconnect()
 	
-	This:C1470.connection.shutdown()
-	This:C1470.connection:=Null:C1517
+	If (This:C1470.connection#Null:C1517)
+		This:C1470.connection.shutdown()
+		This:C1470.connection:=Null:C1517
+	End if 
 	
 	//Send a blob to the server, the server always answer with a text to show to the user
 Function getInfo()
