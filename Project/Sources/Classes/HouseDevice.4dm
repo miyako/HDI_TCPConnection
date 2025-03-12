@@ -8,12 +8,12 @@ Class constructor($form : Object; $port : Integer)
 	This:C1470.connection:=Null:C1517
 	This:C1470.port:=$port
 	
-	//Connects to one of the servers launched inside workers
+	// ワーカー内で起動されているサーバーに接続します
 Function connect()
 	
 	This:C1470.connection:=This:C1470.connection=Null:C1517 ? 4D:C1709.TCPConnection.new("localhost"; This:C1470.port; This:C1470) : This:C1470.connection
 	
-	//Disconnect from the server
+	// サーバーとの接続を解除します
 Function disconnect()
 	
 	If (This:C1470.connection#Null:C1517)
@@ -21,21 +21,21 @@ Function disconnect()
 		This:C1470.connection:=Null:C1517
 	End if 
 	
-	//Send a blob to the server, the server always answer with a text to show to the user
+	// サーバーにBLOBを送信します。サーバーは常に、ユーザーに表示するテキストを返信します
 Function getInfo()
 	
 	var $blob : Blob
 	TEXT TO BLOB:C554("Information"; $blob)
 	This:C1470.connection.send($blob)
 	
-	//Send a blob to the server to "activate" the device
+	// デバイスを作動させるためのBLOBをサーバーに送信します
 Function activate()
 	
 	var $blob : Blob
 	TEXT TO BLOB:C554("Activate"; $blob)
 	This:C1470.connection.send($blob)
 	
-	//Callback called when the connection is successfully established
+	// 接続が完了したときに呼び出されるコールバック
 Function onConnection($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
 	ALERT:C41("Connection established")
@@ -45,7 +45,7 @@ Function onConnection($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TC
 	OBJECT SET ENABLED:C1123(*; "ButtonActivate"; True:C214)
 	OBJECT SET ENABLED:C1123(*; "ButtonDisconnect"; True:C214)
 	
-	//Callback called when the connection is properly closed
+	// 接続が解除されたときに呼び出されるコールバック
 Function onShutdown($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
 	ALERT:C41("Connection closed")
@@ -55,15 +55,15 @@ Function onShutdown($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPE
 	OBJECT SET ENABLED:C1123(*; "ButtonActivate"; False:C215)
 	OBJECT SET ENABLED:C1123(*; "ButtonDisconnect"; False:C215)
 	
-	//Callback called when receiving data. The simple servers always send a sentence to show to the user
+	// データを受信したときに呼び出されるコールバック。この簡単なサーバーは常に、ユーザーに表示するテキストを返信します
 Function onData($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
 	ALERT:C41(BLOB to text:C555($event.data; UTF8 text without length:K22:17))
 	
-	//Warning: There's no guarantee you'll receive all the data you need in a single network packet.
-	//To avoid complexifying this HDI, I haven't checked that I have all my data but you should do it especially if you send a lot of data.
+	// 警告：1つのネットワークパケットで必要なデータをすべて受信できる保証はありません。
+	// このHDIが複雑になるのを避けるため、すべてのデータが揃っていることを確認していませんが、多くのデータを送信する場合は確認する必要があります。
 	
-	//Callback called when the connection is closed unexpectedly
+	// 接続が予定外に解除されたときに呼び出されるコールバック
 Function onError($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
 	ALERT:C41("Connection error")
@@ -73,6 +73,6 @@ Function onError($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEven
 	OBJECT SET ENABLED:C1123(*; "ButtonActivate"; False:C215)
 	OBJECT SET ENABLED:C1123(*; "ButtonDisconnect"; False:C215)
 	
-	//Callback called after onShutdown/onError just before the TCPConnection object is released
+	// TCPConnectionオブジェクトが解放される直前に onShutdown/onError が発生したときに呼び出されるコールバック
 Function onTerminate($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
