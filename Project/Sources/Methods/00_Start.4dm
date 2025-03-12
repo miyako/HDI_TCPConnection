@@ -1,5 +1,6 @@
 //%attributes = {}
-C_LONGINT:C283($1)
+#DECLARE($p : Integer)
+
 C_LONGINT:C283($ps; $win)
 C_OBJECT:C1216($options)
 C_TEXT:C284($cr)

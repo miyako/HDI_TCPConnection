@@ -13,7 +13,7 @@
 	"markerFooter": 240,
 	"events": [
 		"onLoad",
-		"onCloseBox"
+		"onUnload"
 	],
 	"method": "method.4dm",
 	"pageFormat": {

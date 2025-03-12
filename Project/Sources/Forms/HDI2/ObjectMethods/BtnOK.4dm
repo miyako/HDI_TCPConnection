@@ -11,11 +11,7 @@ Case of
 				
 			: (FORM Get current page:C276=2)
 				
-				If (Is Windows:C1573 && Application info:C1599().SDIMode)
-					INVOKE ACTION:C1439(ak return to design mode:K76:62)
-				Else 
-					CANCEL:C270
-				End if 
+				CANCEL:C270
 				
 		End case 
 		
