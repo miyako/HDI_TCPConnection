@@ -212,7 +212,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/ButtonConnect.4dm"
+					"method": "ObjectMethods/ButtonConnect.4dm",
+					"focusable": false
 				},
 				"ButtonInfo": {
 					"type": "button",
@@ -224,7 +225,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/ButtonInfo.4dm"
+					"method": "ObjectMethods/ButtonInfo.4dm",
+					"focusable": false
 				},
 				"ButtonActivate": {
 					"type": "button",
@@ -236,7 +238,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/ButtonActivate.4dm"
+					"method": "ObjectMethods/ButtonActivate.4dm",
+					"focusable": false
 				},
 				"ButtonDisconnect": {
 					"type": "button",
@@ -248,7 +251,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/ButtonDisconnect.4dm"
+					"method": "ObjectMethods/ButtonDisconnect.4dm",
+					"focusable": false
 				},
 				"StartServers": {
 					"type": "button",
@@ -260,7 +264,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/StartServers.4dm"
+					"method": "ObjectMethods/StartServers.4dm",
+					"focusable": false
 				},
 				"OpenLog": {
 					"type": "button",
@@ -272,7 +277,8 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/OpenLog.4dm"
+					"method": "ObjectMethods/OpenLog.4dm",
+					"focusable": false
 				}
 			}
 		}
