@@ -4,8 +4,8 @@
 DELAY PROCESS:C323(Current process:C322; 2)
 
 var $status : Integer
-var $positiveState : Text:="Music is playing but no one is listening..."
-var $negativeState : Text:="Music is not playing!"
+var $positiveState : Text:="音楽を再生していますが、誰も聞いていません..."
+var $negativeState : Text:="音楽の再生は停止しています"
 
 Case of 
 	: (Count parameters:C259=1)

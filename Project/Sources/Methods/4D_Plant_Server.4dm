@@ -31,22 +31,22 @@ Case of
 				$text:=BLOB to text:C555($data; UTF8 C string:K22:15)
 				If ($text="Information")
 					If ($activated)
-						TEXT TO BLOB:C554("You need to learn more about biology..."; $blob; UTF8 C string:K22:15)
+						TEXT TO BLOB:C554("生きているので停止できません"; $blob; UTF8 C string:K22:15)
 					Else 
 						If ($info=1)
-							TEXT TO BLOB:C554("It grows!"; $blob; UTF8 C string:K22:15)
+							TEXT TO BLOB:C554("成長しています"; $blob; UTF8 C string:K22:15)
 						End if 
 						If ($info=2)
-							TEXT TO BLOB:C554("It still grows!"; $blob; UTF8 C string:K22:15)
+							TEXT TO BLOB:C554("引き続き成長しています"; $blob; UTF8 C string:K22:15)
 						End if 
 						If ($info=3)
-							TEXT TO BLOB:C554("Still growing!"; $blob; UTF8 C string:K22:15)
+							TEXT TO BLOB:C554("まだまだ成長しています"; $blob; UTF8 C string:K22:15)
 						End if 
 						If ($info=4)
-							TEXT TO BLOB:C554("What do you expect?"; $blob; UTF8 C string:K22:15)
+							TEXT TO BLOB:C554("どこまで成長するのでしょう？"; $blob; UTF8 C string:K22:15)
 						End if 
 						If ($info=5)
-							TEXT TO BLOB:C554("Reset in progress..."; $blob; UTF8 C string:K22:15)
+							TEXT TO BLOB:C554("成長記録リセット中..."; $blob; UTF8 C string:K22:15)
 							$info:=0
 						End if 
 						$info+=1

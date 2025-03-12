@@ -4,8 +4,8 @@
 DELAY PROCESS:C323(Current process:C322; 2)
 
 var $status : Integer
-var $positiveState : Text:="Alarm\r\n is on! Nothing to report."
-var $negativeState : Text:="Alarm is off! You should turn it on."
+var $positiveState : Text:="アラームが作動しています。異常はありません。"
+var $negativeState : Text:="アラームは停止中です。アラームを作動させてください。"
 
 Case of 
 	: (Count parameters:C259=1)

@@ -35,7 +35,7 @@ Case of
 					Else 
 						$temperature-=1
 					End if 
-					$text:="Temperature is "+String:C10($temperature)+" degree Celsius"
+					$text:="現在の室温は "+String:C10($temperature)+" 度です。"
 					TEXT TO BLOB:C554($text; $blob; UTF8 C string:K22:15)
 					TCP_SendBLOB($TCP_ID; $blob)
 				Else 

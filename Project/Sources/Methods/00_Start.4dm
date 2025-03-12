@@ -29,10 +29,10 @@ Case of
 		
 		$options:=New object:C1471
 		
-		$options.title:="HDI TCPConnection"
+		$options.title:="TCPConnection オブジェクトを使ってサーバーに接続するの？"
 		
 		$options.blog:="blog.4d.com"
-		$options.info:="Using TCPConnection to connect to a server"  //ex : "4D View Pro feature"
+		$options.info:="4D.TCPConnection"  //ex : "4D View Pro feature"
 		
 		$options.minimumVersion:="2080"  // 1660 means 16R6   1601 means 16.1 (do not use !)
 		

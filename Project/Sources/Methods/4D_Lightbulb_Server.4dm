@@ -4,8 +4,8 @@
 DELAY PROCESS:C323(Current process:C322; 2)
 
 var $status : Integer
-var $positiveState : Text:="Light is on!"
-var $negativeState : Text:="Light is off!"
+var $positiveState : Text:="照明は点灯中です"
+var $negativeState : Text:="照明は消灯中です"
 
 Case of 
 	: (Count parameters:C259=1)
