@@ -38,7 +38,7 @@ Function activate()
 	// 接続が完了したときに呼び出されるコールバック
 Function onConnection($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
-	ALERT:C41("接続に成功しました。")
+	ALERT:C41("接続に成功しました")
 	
 	OBJECT SET ENABLED:C1123(*; "ButtonConnect"; False:C215)
 	OBJECT SET ENABLED:C1123(*; "ButtonInfo"; True:C214)
@@ -48,7 +48,7 @@ Function onConnection($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TC
 	// 接続が解除されたときに呼び出されるコールバック
 Function onShutdown($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
-	ALERT:C41("接続が解除されました。")
+	ALERT:C41("接続が解除されました")
 	
 	OBJECT SET ENABLED:C1123(*; "ButtonConnect"; True:C214)
 	OBJECT SET ENABLED:C1123(*; "ButtonInfo"; False:C215)
@@ -66,7 +66,7 @@ Function onData($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent
 	// 接続が予定外に解除されたときに呼び出されるコールバック
 Function onError($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
 	
-	ALERT:C41("接続中にエラーが発生しました。")
+	ALERT:C41("接続中にエラーが発生しました")
 	
 	OBJECT SET ENABLED:C1123(*; "ButtonConnect"; True:C214)
 	OBJECT SET ENABLED:C1123(*; "ButtonInfo"; False:C215)
