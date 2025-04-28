@@ -4,7 +4,7 @@
 
 Description (4D 20 R9)
 
-goto R8 branch for the version that does not use `TCPListener`
+goto [R8 branch](https://github.com/miyako/HDI_TCPConnection/blob/r8/readme.md) for the version that does not use `TCPListener`
 
 Find more information on the [blog post](https://blog.4d.com/new-class-to-perform-tcp-connections).
 
