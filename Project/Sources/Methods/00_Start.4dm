@@ -1,9 +1,9 @@
 //%attributes = {}
 #DECLARE($p : Integer)
 
-C_LONGINT:C283($ps; $win)
-C_OBJECT:C1216($options)
-C_TEXT:C284($cr)
+var $ps; $win : Integer
+var $options : Object
+var $cr : Text
 
 Case of 
 	: (Count parameters:C259=0)
@@ -34,7 +34,7 @@ Case of
 		$options.blog:="blog.4d.com"
 		$options.info:="Using TCPConnection to connect to a server"  //ex : "4D View Pro feature"
 		
-		$options.minimumVersion:="2080"  // 1660 means 16R6   1601 means 16.1 (do not use !)
+		$options.minimumVersion:="2090"  // 1660 means 16R6   1601 means 16.1 (do not use !)
 		
 		
 		// $options.license:=4D View license  // IF ANY NEEDED

@@ -19,16 +19,15 @@ Case of
 		
 	: ($event.code=On Unload:K2:2)
 		
-		KILL WORKER:C1390("4D_Lightbulb_Server")
-		KILL WORKER:C1390("4D_Thermometer_Server")
-		KILL WORKER:C1390("4D_Alarm_Server")
-		KILL WORKER:C1390("4D_Music_Server")
-		KILL WORKER:C1390("4D_Plant_Server")
-		
 		Form:C1466.lightBulb.disconnect()
 		Form:C1466.thermometer.disconnect()
 		Form:C1466.alarm.disconnect()
 		Form:C1466.music.disconnect()
 		Form:C1466.plant.disconnect()
+		
+		var $name : Text
+		For each ($name; ["4D_Lightbulb_Server"; "4D_Thermometer_Server"; "4D_Alarm_Server"; "4D_Music_Server"; "4D_Plant_Server"])
+			CALL WORKER:C1389($name; Formula:C1597(terminateServer))
+		End for each 
 		
 End case 
