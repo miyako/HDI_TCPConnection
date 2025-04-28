@@ -1,3 +1,5 @@
+![version](https://img.shields.io/badge/version-20%20R8%2B-E23089)
+
 # HDI_TCPConnection
 
 Description (4D 20 R8)
