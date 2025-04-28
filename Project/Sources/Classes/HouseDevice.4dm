@@ -72,6 +72,7 @@ Function onError($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEven
 	OBJECT SET ENABLED:C1123(*; "ButtonInfo"; False:C215)
 	OBJECT SET ENABLED:C1123(*; "ButtonActivate"; False:C215)
 	OBJECT SET ENABLED:C1123(*; "ButtonDisconnect"; False:C215)
+	This:C1470.connection:=Null:C1517
 	
 	//Callback called after onShutdown/onError just before the TCPConnection object is released
 Function onTerminate($connection : 4D:C1709.TCPConnection; $event : 4D:C1709.TCPEvent)
