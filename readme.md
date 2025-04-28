@@ -1,6 +1,10 @@
+![version](https://img.shields.io/badge/version-20%20R9%2B-E23089)
+
 # HDI_TCPConnection
 
-Description (4D 20 R8)
+Description (4D 20 R9)
+
+goto R8 branch for the version that does not use `TCPListener`
 
 Find more information on the [blog post](https://blog.4d.com/new-class-to-perform-tcp-connections).
 
