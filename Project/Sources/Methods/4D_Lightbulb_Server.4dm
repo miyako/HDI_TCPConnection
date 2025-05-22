@@ -48,6 +48,7 @@ Case of
 		
 		If (0#TCP_State($TCP_ID; $status)) || ($status=0)
 			TCP_Close($TCP_ID)
+			CALL WORKER:C1389(Current process name:C1392; Current method name:C684; $port)
 		Else 
 			CALL WORKER:C1389(Current process name:C1392; Current method name:C684; $port; $TCP_ID; $activated)
 		End if 
